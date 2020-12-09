@@ -1,4 +1,7 @@
 language: c
+arch:
+    - amd64
+    - ppc64le
 install: wget https://raw.githubusercontent.com/ocaml/ocaml-travisci-skeleton/master/.travis-docker.sh
 script: bash -ex .travis-docker.sh
 services:
@@ -18,23 +21,5 @@ env:
     - DISTRO=alpine OCAML_VERSION=4.08.1
     - DISTRO=alpine OCAML_VERSION=4.09.1
     - DISTRO=alpine OCAML_VERSION=4.10.0
-#adding code to run on power systems
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.02.3      
-    - arch: ppc64le 
-       DISTRO=alpine OCAML_VERSION=4.03.0      
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.04.2      
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.05.0      
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.06.1      
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.07.1      
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.08.1      
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.09.1      
-    - arch: ppc64le
-       DISTRO=alpine OCAML_VERSION=4.10.0
+
       
